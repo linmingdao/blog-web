@@ -1,8 +1,15 @@
 import axios from 'axios';
+import navigationBar from '@app/components/navigation-bar/index.vue';
 import markdownViewer from '@app/components/markdown-viewer/index.vue';
 
 export default {
+    props: {
+        articleId: {
+            type: String
+        }
+    },
     data() {
+        console.log(this.articleId);
         return {
             defaultProps: {
                 children: 'children',
@@ -11,19 +18,17 @@ export default {
             category: []
         };
     },
-    created() {
-        this.fetchCatalog();
+    async created() {
+        const res = await axios.get('https://linmingdao.github.io/blog/category.json');
+        this.$set(this, 'category', res.data);
     },
     methods: {
-        async fetchCatalog() {
-            const res = await axios.get('https://linmingdao.github.io/blog/category.json');
-            this.$set(this, 'category', res.data);
-        },
         handleNodeClick({ url }) {
-            url && this.$refs['markdownViewer'].setUrl(url);
+            if (!url) return;
+            const articleId = '37192';
+            const { origin } = window.location;
+            window.open(`${origin}/#/article/${articleId}`);
         }
     },
-    components: {
-        markdownViewer
-    }
+    components: { navigationBar, markdownViewer }
 };

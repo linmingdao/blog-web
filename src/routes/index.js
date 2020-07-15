@@ -9,5 +9,12 @@ export default [
         path: '/home',
         component: () => import('@app/modules/home/index.vue'),
         beforeEnter: (to, from, next) => authorize(to, from, next)
+    },
+    {
+        path: '/article/:articleId',
+        name: 'article',
+        props: true,
+        component: () => import('@app/modules/article/index.vue'),
+        beforeEnter: (to, from, next) => authorize(to, from, next)
     }
 ];
