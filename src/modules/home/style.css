@@ -1,7 +1,40 @@
 .main-body {
     & .content-box {
+        overflow: auto;
+
         & >>> .el-tree-node__label {
             font-size: 16px;
+        }
+        & .article-list {
+            max-width: 900px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            & .article-item {
+                height: 80px;
+                padding: 0 20px;
+                margin: 10px 0;
+                border: 1px solid #eee;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                & .date {
+                    color: #b7b7b7;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+
+                & .title {
+                    font-size: 22px;
+                    color: #5e97d4;
+                    text-decoration: none;
+                }
+                & .title:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }

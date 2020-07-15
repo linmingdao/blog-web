@@ -3,19 +3,14 @@ import navigationBar from '@app/components/navigation-bar/index.vue';
 import markdownViewer from '@app/components/markdown-viewer/index.vue';
 
 export default {
-    props: {
-        articleId: {
-            type: String
-        }
-    },
     data() {
-        console.log(this.articleId);
         return {
             defaultProps: {
                 children: 'children',
                 label: 'label'
             },
-            category: []
+            category: [],
+            articlePrefix: `${window.location.origin}/#/article/`
         };
     },
     async created() {
@@ -26,8 +21,7 @@ export default {
         handleNodeClick({ url }) {
             if (!url) return;
             const articleId = '37192';
-            const { origin } = window.location;
-            window.open(`${origin}/#/article/${articleId}`);
+            window.open(`${this.articlePrefix}${articleId}`);
         }
     },
     components: { navigationBar, markdownViewer }
