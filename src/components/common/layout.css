@@ -12,6 +12,7 @@
         height: 50px;
         color: #777;
         border-bottom: 1px solid #e8e8e8;
+        box-shadow: 0 2px 8px #f0f1f2;
         display: flex;
         justify-content: space-between;
 
@@ -52,5 +53,7 @@
 
     & .content-box {
         height: calc(100% - 50px);
+        padding: 10px;
+        box-sizing: border-box;
     }
 }
