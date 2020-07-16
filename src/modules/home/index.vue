@@ -2,13 +2,7 @@
     <div class="main-body">
         <navigation-bar />
         <div class="content-box">
-            <!-- <el-tree
-                :data="category"
-                :props="defaultProps"
-                :highlight-current="true"
-                :default-expand-all="true"
-                @node-click="handleNodeClick"
-            /> -->
+            <category-tree :articleBaseUrl="articleBaseUrl" :category="category" :defaultProps="defaultProps" />
             <div class="article-list">
                 <div class="article-item" v-for="item in flatCategory" :key="item.id">
                     <span class="date">
@@ -16,7 +10,7 @@
                         {{ item.date }}
                     </span>
                     <span>
-                        <a class="title" :href="articlePrefix + item.id" target="_blank">{{ item.label }}</a>
+                        <a class="title" :href="articleBaseUrl + item.id" target="_blank">{{ item.label }}</a>
                     </span>
                 </div>
             </div>

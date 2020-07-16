@@ -52,6 +52,7 @@
     }
 
     & .content-box {
+        position: relative;
         height: calc(100% - 50px);
         padding: 10px;
         box-sizing: border-box;

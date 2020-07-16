@@ -12,6 +12,7 @@
 }
 
 .single-doc-box {
+    position: relative;
     overflow: auto;
 
     & .doc-box {
