@@ -6,15 +6,15 @@ export default {
     props: {
         articleId: {
             type: String,
-            default: 'https://linmingdao.github.io/blog/todolist.md'
+            default: ''
         },
         navBar: {
             type: Boolean,
             default: true
         },
-        url: {
+        baseUrl: {
             type: String,
-            default: 'https://linmingdao.github.io/blog/todolist.md'
+            default: 'https://linmingdao.github.io/blog/documents/'
         }
     },
     components: {

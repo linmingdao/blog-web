@@ -10,13 +10,13 @@
                 @node-click="handleNodeClick"
             /> -->
             <div class="article-list">
-                <div class="article-item" v-for="i in 20" :key="i">
+                <div class="article-item" v-for="item in flatCategory" :key="item.id">
                     <span class="date">
                         <i class="iconfont iconshijian" style="color: #b7b7b7;"></i>
-                        2020年07月15日
+                        {{ item.date }}
                     </span>
                     <span>
-                        <a class="title" :href="articlePrefix + '888'" target="_blank">新丑陋中国人</a>
+                        <a class="title" :href="articlePrefix + item.id" target="_blank">{{ item.label }}</a>
                     </span>
                 </div>
             </div>
