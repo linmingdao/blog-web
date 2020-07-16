@@ -2,7 +2,6 @@
     <div class="main-body">
         <navigation-bar />
         <div class="content-box">
-            <category-tree :articleBaseUrl="articleBaseUrl" :category="category" :defaultProps="defaultProps" />
             <div class="article-list">
                 <div class="article-item" v-for="item in flatCategory" :key="item.id">
                     <span class="date">

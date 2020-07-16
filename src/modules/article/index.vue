@@ -2,12 +2,10 @@
     <div class="main-body" v-if="navBar">
         <navigation-bar :is-blog-home="false" />
         <div class="content-box">
-            <category-tree :articleBaseUrl="articleBaseUrl" :category="category" :defaultProps="defaultProps" />
             <div class="doc"><markdown-viewer :url="baseUrl + articleId + '.md'" /></div>
         </div>
     </div>
     <div class="single-doc-box" v-else>
-        <category-tree :articleBaseUrl="articleBaseUrl" :category="category" :defaultProps="defaultProps" />
         <div class="doc-box">
             <markdown-viewer :url="baseUrl + articleId + '.md'" />
         </div>

@@ -1,6 +1,14 @@
 <template>
     <div class="navigation-box">
+        <category-tree
+            v-show="isShowCategory"
+            v-model="isShowCategory"
+            :articleBaseUrl="articleBaseUrl"
+            :category="category"
+            :defaultProps="defaultProps"
+        />
         <div class="blog-logo">
+            <a class="category-btn" @click="isShowCategory = true"></a>
             <a :href="href" :target="isBlogHome ? '_self' : '_blank'">
                 <i class="iconfont iconjidan"></i>
                 {{ slogan }}
@@ -8,7 +16,7 @@
         </div>
         <div class="nav-area">
             <a class="nav-item" :href="href" :target="isBlogHome ? '_self' : '_blank'">
-                <i class="iconfont icondingwei" style="color:#5e97d4;" v-if="isBlogHome"></i>
+                <i class="iconfont icondingwei" style="color: #5e97d4;" v-if="isBlogHome"></i>
                 博客
             </a>
             <a class="nav-item" v-for="nav in items" :key="nav.label" :href="nav.href" target="_blank">

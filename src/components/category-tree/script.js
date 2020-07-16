@@ -1,6 +1,7 @@
 export default {
     name: 'category-tree',
     props: {
+        value: Boolean,
         defaultProps: {
             type: Object,
             default: function() {

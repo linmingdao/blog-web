@@ -1,6 +1,6 @@
 <template>
-    <div class="category-tree-mask">
-        <div class="category-tree-box">
+    <div class="category-tree-mask" @mousedown.prevent="$emit('input', false)">
+        <div class="category-tree-box" @mousedown.stop="">
             <el-tree
                 class="category-tree"
                 :data="category"

@@ -1,4 +1,8 @@
+import categoryMixins from '@app/modules/categoryMixins.js';
+import categoryTree from '@app/components/category-tree/index.vue';
+
 export default {
+    mixins: [categoryMixins],
     props: {
         isBlogHome: {
             type: Boolean,
@@ -15,8 +19,7 @@ export default {
         items: {
             type: Array,
             default: function() {
-                return [
-                    {
+                return [{
                         label: '微博',
                         target: '_blank',
                         href: 'https://weibo.com/p/1005052270750257/home?from=page_100505&mod=TAB&is_all=1#place'
@@ -39,5 +42,11 @@ export default {
                 ];
             }
         }
-    }
+    },
+    data() {
+        return {
+            isShowCategory: false
+        };
+    },
+    components: { categoryTree }
 };

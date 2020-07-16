@@ -15,6 +15,7 @@
         box-shadow: 0 2px 8px #f0f1f2;
         display: flex;
         justify-content: space-between;
+        position: relative;
 
         & a {
             color: #777;
@@ -27,9 +28,24 @@
             line-height: 50px;
             text-align: center;
             padding: 0 20px;
+            padding-left: 60px;
+            position: relative;
 
             & .iconjidan {
                 font-size: 24px;
+            }
+
+            & .category-btn {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 30px;
+                width: 30px;
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAgCAYAAAB3j6rJAAAA+0lEQVRYR+2XYQ6DIAyF25u5UwAX2DWmp5FbzJPZpYlZFlYC2LqxRX+a9vnxaAtiCIGg7lnmeb5IoSGEFQCwTkaOwu5AiEhcLQAMiHgDgM84wiAxxiU1zns/niCvrvyUI865q6ZjOPfZNZoa0UKkIFNOsFSspiAVYtn2rcgthvDW3IWogedG+j43WYtfqQh4G8sb2EBEU4xxrNAwCTEB8d6zg6rHBKThvMrC9g+i8nlHctaRHVqqlP63pqV9uynWbtpXVRxbskmNnCAWDqQa/7U1fK/VumTiyOFzRLocSStHROly1WRS92dN02r4t7Q1odg1ewQPqZFvgTwAEUoGZxgV+74AAAAASUVORK5CYII=');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 90% 90%;
             }
         }
 
