@@ -1,5 +1,5 @@
 import axios from 'axios';
-const hljs = require('highlight.js');
+import hljs from 'highlight.js';
 const md = require('markdown-it')({
     html: true,
     xhtmlOut: true,
