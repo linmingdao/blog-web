@@ -3,9 +3,9 @@ import markdownViewer from '@app/components/markdown-viewer/index.vue';
 import categorySwitcher from '@app/components/category-switcher/index.vue';
 
 export default {
-    name: 'article',
+    name: 'paper',
     props: {
-        articleId: {
+        paperId: {
             type: String,
             default: ''
         },

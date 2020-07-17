@@ -8,7 +8,8 @@
     display: none;
 
     & .category-tree-box {
-        width: 500px;
+        width: 85%;
+        max-width: 570px;
         height: 100%;
         box-sizing: border-box;
         padding: 10px 0;
@@ -18,4 +19,9 @@
             height: 100%;
         }
     }
+}
+
+.el-tree-node__label {
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

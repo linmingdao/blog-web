@@ -11,10 +11,10 @@ export default [
         beforeEnter: (to, from, next) => authorize(to, from, next)
     },
     {
-        path: '/article/:articleId',
-        name: 'article',
+        path: '/paper/:paperId',
+        name: 'paper',
         props: true,
-        component: () => import('@app/modules/article/index.vue'),
+        component: () => import('@app/modules/paper/index.vue'),
         beforeEnter: (to, from, next) => authorize(to, from, next)
     }
 ];

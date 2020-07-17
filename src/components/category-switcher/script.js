@@ -22,7 +22,7 @@ export default {
             metadata: {},
             flatCategory: [],
             defaultProps: { children: 'children', label: 'label' },
-            articleBaseUrl: `${window.location.origin}/#/article/`
+            articleBaseUrl: `${window.location.origin}/#/paper/`
         };
     },
     async created() {
@@ -54,7 +54,11 @@ export default {
             document.body.appendChild(categoryTreeNode);
             this.$set(this, 'categoryTreeNode', categoryTreeNode);
 
-            this.$findParentComponent('home').initData({ flatCategory, articleBaseUrl });
+            // 设置home模块的文章列表信息
+            const homeComponent = this.$findParentComponent('home');
+            if (homeComponent) {
+                homeComponent.initData({ flatCategory, articleBaseUrl });
+            }
         }
     }
 };

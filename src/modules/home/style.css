@@ -1,24 +1,23 @@
 .main-body {
     & .content-box {
-        overflow: auto;
-
-        & >>> .el-tree-node__label {
-            font-size: 16px;
-        }
         & .article-list {
-            max-width: 900px;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-
             & .article-item {
                 height: 80px;
                 padding: 0 20px;
                 margin: 10px 0;
                 border: 1px solid #eee;
+                box-sizing: border-box;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                border-radius: 8px;
+
+                & .date,
+                & .title {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
 
                 & .date {
                     color: #b7b7b7;
@@ -31,6 +30,7 @@
                     color: #5e97d4;
                     text-decoration: none;
                 }
+
                 & .title:hover {
                     text-decoration: underline;
                 }
