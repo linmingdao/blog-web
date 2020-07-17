@@ -1,0 +1,12 @@
+<div class="category-tree-mask" @mousedown.prevent="hideSelf">
+    <div class="category-tree-box" @mousedown.stop="">
+        <el-tree
+            class="category-tree"
+            :data="category"
+            :props="defaultProps"
+            :highlight-current="true"
+            :default-expand-all="true"
+            @node-click="handleNodeClick"
+        />
+    </div>
+</div>

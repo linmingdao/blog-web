@@ -1,4 +1,5 @@
 import axios from 'axios';
+import CategoryTree from './category-tree/index.js';
 
 function doFlatCategory(category, arr) {
     if (category.children) {
@@ -12,10 +13,13 @@ function doFlatCategory(category, arr) {
 }
 
 export default {
+    name: 'category-switcher',
     data() {
         return {
+            categoryTreeNode: undefined,
             updates: [],
             category: [],
+            metadata: {},
             flatCategory: [],
             defaultProps: { children: 'children', label: 'label' },
             articleBaseUrl: `${window.location.origin}/#/article/`
@@ -33,5 +37,24 @@ export default {
         category.forEach(item => doFlatCategory(item, flatCategory));
         // TODO: flatCategory 根据文档发布日期排序
         this.$set(this, 'flatCategory', flatCategory);
+
+        // 初始化文档树形分类菜单
+        this.initCategoryTree(category);
+    },
+    methods: {
+        showCategoryTree() {
+            this.categoryTreeNode.style.display = 'block';
+        },
+        initCategoryTree(category) {
+            const { defaultProps, flatCategory, articleBaseUrl } = this;
+            const categoryTree = new CategoryTree({
+                propsData: { defaultProps, category, articleBaseUrl }
+            }).$mount();
+            const categoryTreeNode = categoryTree.$el;
+            document.body.appendChild(categoryTreeNode);
+            this.$set(this, 'categoryTreeNode', categoryTreeNode);
+
+            this.$findParentComponent('home').initData({ flatCategory, articleBaseUrl });
+        }
     }
 };

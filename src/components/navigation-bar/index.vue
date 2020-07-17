@@ -1,18 +1,8 @@
 <template>
     <div class="navigation-box">
-        <category-tree
-            v-show="isShowCategory"
-            v-model="isShowCategory"
-            :articleBaseUrl="articleBaseUrl"
-            :category="category"
-            :defaultProps="defaultProps"
-        />
         <div class="blog-logo">
-            <a class="category-btn" @click="isShowCategory = true"></a>
-            <a :href="href" :target="isBlogHome ? '_self' : '_blank'">
-                <i class="iconfont iconjidan"></i>
-                {{ slogan }}
-            </a>
+            <a class="logo"></a>
+            <a :href="href" :target="isBlogHome ? '_self' : '_blank'">{{ slogan }} </a>
         </div>
         <div class="nav-area">
             <a class="nav-item" :href="href" :target="isBlogHome ? '_self' : '_blank'">

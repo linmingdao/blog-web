@@ -1,7 +1,10 @@
-export default {
-    name: 'category-tree',
+import Vue from 'vue';
+import './style.css';
+import template from './template.html';
+
+export default Vue.extend({
+    template,
     props: {
-        value: Boolean,
         defaultProps: {
             type: Object,
             default: function() {
@@ -20,9 +23,12 @@ export default {
         }
     },
     methods: {
+        hideSelf() {
+            this.$el.style.display = 'none';
+        },
         handleNodeClick({ id }) {
             if (!id) return;
             window.open(`${this.articleBaseUrl}${id}`);
         }
     }
-};
+});

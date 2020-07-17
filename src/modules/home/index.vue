@@ -2,6 +2,7 @@
     <div class="main-body">
         <navigation-bar />
         <div class="content-box">
+            <category-switcher />
             <div class="article-list">
                 <div class="article-item" v-for="item in flatCategory" :key="item.id">
                     <span class="date">

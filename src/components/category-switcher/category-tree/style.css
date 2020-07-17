@@ -3,12 +3,17 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    display: none;
 
     & .category-tree-box {
         width: 500px;
         height: 100%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        background-color: #fff;
+
         & .category-tree {
             height: 100%;
         }
