@@ -10,7 +10,7 @@
         ],
         "scripts": [
             "https://cdn.jsdelivr.net/npm/vue@2.6.11",
-            "https://unpkg.com/vue-router@3.0.1/dist/vue-router.js",
+            "https://unpkg.com/vue-router@3.3.4/dist/vue-router.js",
             "https://unpkg.com/element-ui/lib/index.js",
             "https://unpkg.com/axios/dist/axios.min.js",
             "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"
