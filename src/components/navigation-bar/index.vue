@@ -5,13 +5,7 @@
             <a :href="href" target="_self">{{ slogan }} </a>
         </div>
         <div class="nav-area">
-            <el-popover
-                ref="popover"
-                placement="bottom"
-                width="300"
-                trigger="focus"
-                content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。"
-            >
+            <el-popover ref="popover" placement="bottom" width="300" trigger="focus">
                 <div class="filter-list">
                     <a
                         class="filter-item"

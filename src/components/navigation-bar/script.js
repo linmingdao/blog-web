@@ -1,5 +1,10 @@
 export default {
+    name: 'navigation-bar',
     props: {
+        href: {
+            type: String,
+            default: 'https://linmingdao.github.io/'
+        },
         slogan: {
             type: String,
             default: '叕要开始扯蛋了'
@@ -43,24 +48,18 @@ export default {
         }
     },
     data() {
-        let flatCategory = [];
-        let filterItems = [];
-
-        const articleBaseUrl = sessionStorage.getItem('articleBaseUrl');
-        const flatCategoryStr = sessionStorage.getItem('flatCategory');
-        if (flatCategoryStr) {
-            flatCategory = JSON.parse(flatCategoryStr);
-            filterItems = [...flatCategory];
-        }
-
         return {
             filterTxt: '',
-            filterItems,
-            flatCategory,
-            articleBaseUrl
+            filterItems: [],
+            flatCategory: [],
+            articleBaseUrl: ''
         };
     },
     methods: {
+        initData({ flatCategory, articleBaseUrl }) {
+            this.$set(this, 'flatCategory', flatCategory);
+            this.$set(this, 'articleBaseUrl', articleBaseUrl);
+        },
         handleInput(val) {
             this.$set(
                 this,
