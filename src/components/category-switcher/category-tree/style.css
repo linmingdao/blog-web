@@ -3,9 +3,10 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0);
     z-index: 1000;
     display: none;
+    transition: display 5s ease-out;
 
     & .category-tree-box {
         width: 85%;
@@ -13,10 +14,16 @@
         height: 100%;
         box-sizing: border-box;
         padding: 10px 0;
-        background-color: #fff;
+        background-color: #2f2f2f;
 
         & .category-tree {
             height: 100%;
+            background-color: #2f2f2f;
+            color: #fff;
+            & .el-tree-node__content:hover {
+                color: #5e97d4;
+                background-color: #2f2f2f;
+            }
         }
     }
 }
@@ -24,4 +31,9 @@
 .el-tree-node__label {
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content {
+    color: #fff;
+    background-color: #2f2f2f;
 }

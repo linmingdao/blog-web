@@ -10,7 +10,9 @@
                             <i class="iconfont iconshijian" style="color: #b7b7b7;"></i>
                             {{ item.date }}
                         </div>
-                        <a class="title" :href="articleBaseUrl + item.id" target="_blank">{{ item.label }}</a>
+                        <a class="title" :href="articleBaseUrl + item.id" target="_blank" :title="item.label">
+                            {{ item.label }}
+                        </a>
                     </div>
                 </div>
             </div>
