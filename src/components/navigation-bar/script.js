@@ -46,26 +46,5 @@ export default {
                 ];
             }
         }
-    },
-    data() {
-        return {
-            filterTxt: '',
-            filterItems: [],
-            flatCategory: [],
-            articleBaseUrl: ''
-        };
-    },
-    methods: {
-        initData({ flatCategory, articleBaseUrl }) {
-            this.$set(this, 'flatCategory', flatCategory);
-            this.$set(this, 'articleBaseUrl', articleBaseUrl);
-        },
-        handleInput(val) {
-            this.$set(
-                this,
-                'filterItems',
-                this.flatCategory.filter(item => item.label.toLowerCase().includes(val.toLowerCase()))
-            );
-        }
     }
 };
