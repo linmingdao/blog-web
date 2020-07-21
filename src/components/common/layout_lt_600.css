@@ -1,7 +1,0 @@
-.main-body {
-    & .navigation-box {
-        & .nav-area {
-            display: none;
-        }
-    }
-}

@@ -1,32 +1,21 @@
+@import '@app/components/common/variables.css';
+
 .main-body {
     width: 100%;
     height: 100%;
-    background-color: #fff;
     overflow: hidden;
     font-size: 18px;
-
-    .category-switcher {
-        position: fixed;
-        text-align: center;
-        cursor: pointer;
-        z-index: 500;
-        
-        & .iconfont {
-            color: #777;
-            font-size: 30px !important;
-        }
-    }
+    background-color: var(--bg-color);
 
     & .navigation-box {
         height: 50px;
-        color: #777;
-        border-bottom: 1px solid #e8e8e8;
-        box-shadow: 0 2px 8px #f0f1f2;
+        color: var(--nav-color);
+        background-color: var(--primary);
         display: flex;
         justify-content: space-between;
 
         & a {
-            color: #777;
+            color: var(--nav-color);
             text-decoration: none;
             cursor: pointer;
         }
@@ -48,7 +37,120 @@
                 background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFiElEQVRYR61Xe0xTVxj/nVuBKoI1QVDcsCrIdGZodJrFEcEpzkfURYfR/YMsDOPmUGeiNCrFuNYt8xXn3HBBXBTn4gZR8QEkwvQfnXPdI+oEpajMCU4RROnzLN+pt/bSW2jZTtL05J7v8fue5zsMQaykGYZxAPI4uJ4xlgZwK+ewMrByhyP8gLXG2BqEGFUS1h2j/s31+jCXVACGLKJL1sdh8KBotHd0oq6xRfxzjlYw7KyvNBX2BkRAAGQ1B84yBt289FeQkzkFQ2N1Ch2X/miEcU8F/mp+BHCU1FWZloUKQhWArDy6v1ZXVLgUycPjupVr/LwCx87+RiAsDkd4eigh8QOgTzPq+oTZG4JVLiP78sg5FH13PmRP+AFInJFfwxibenhbtoh5KMvHE8vqqkwlwfAqACRmGIwMKMhdnIrczNeD4VfQtD3uRG5BKa413BOJCc5r6qvMtd0J8gKQXT9xbIJu3+Z3QlYuM1BivldQ6sPPrW5g9Y1Kc7maUC8A2XpSPuHlhF4DIMY1nxzFaynD8LjDhv3lF/H4iQ0cfGd9pXl1V8ECwP9lvSy8qbkVn359Bqa8uWjvsGH3oR9x6vxV1QQVAJJmGLLAsH/7ukVIm5SkAEnCuta/L0Ggc/LCisVTMGRQtCA3FVXJIBQJKgAkZhjKoyO182u/UXroz4Z7WLK2WFQDVUXX1d059YUHD9vx9kzq4hCeyDP/gOuNLa1OjXu89fRWK31n5P6wcPtD6nbGD+YodMgKRulj8e22dwMCUDunisjZeBDFW5Z4+ah9Z288DIAfqKs0i/bORmbkL5DAytTcTwS9DQHx5mw6hC0rZ6F/vwgvCDkUDsk9nLzA5Ow/sXcF4mMHgDns0N6+AbhccEdoYUtI9DL7gvHdS087EHGnQdC5IqNgjx8m9gePX4R+yACMH/2CV8bd+23IXEM9yuMFRp1vaJxuKgGQV59/mj1bSYJzYIzYksLPiquxY/0ixV640WGHps1zI3OtFq7IaHDOcavpPo7V/I7styYrwrfS9D1+udrUWl9lGigATBw7bGowzWf11qOipukapm6ZPmmUX17IH+x2O9o7nmLz3tOiHH3XyXNXYN5XDe52p7OkDAOnxhMMgGBygmjcbjc6O2lW4CBrdxsWKgDIYeBAoQCgVgEBTQvigJS7XC5BqQaAvs9a/hV5sjZkD/Skn1zvcDi8ZIEA0HfL1SZLSDnQk3JSTADk9aTTgXXbj/mFQPaM5VoTVKugJ0Vq5zabDU6nU3H0sL0TZdW/+lUBERl2ncC5n2+CJU7PX8UktqM3A4iccGS1HHNltl9DVL9wpE4Y4Yf5WSk2MjH5uqWGpXNfxdpl04M2njKdLPaNd1fmrA2lKNmyVFVm9obDuN7YXOu5DTPyLVGRfVMq9uairzYCGo1GlYmUkqXyrzu0N+48QO1Pdaruv9vShsyPSuDm2OW5DaevT2OSdHbrmnmYMk7vlStJEhhjqu7tyVVk/e78hYiKfH4PyDzFZRewv+wCzQfjfSeicgbMP7ItC/HP7vCelAQ6L/ziDKZNTlKNvWw957y2vsqcppgJw8JtNQBL+S8gSk9ehi5Ki9mpY/zwURv/0EQzQfMjp4aPE7ehL5VnNvCAKHx/NqZNfn4T9uQNqvlNe07hjUlJmJU62o+87lYLzEXVoH9weKci1YeJJsxulBjyBsdEY+PymRgzMg59NJIqBqr1Q8cv4fKV2/h41RwMifGMYPIil1O8aSbknD9iYKt83wwB34aUmGDMSI8UEpaSHI+Xhg/GiBdjcPP2fSH/yOnLCmU0eCQmxAgQdOH8LX7tgoZi7tTwLHkUkxm7fR2LEqVHKudpYFhAExxjENMGCWQMVnBWA8ASiIaDWSSIh6tFzYX/AvYcvss3LhwzAAAAAElFTkSuQmCC');
                 background-position: center center;
                 background-repeat: no-repeat;
-                background-size: 90% 90%;
+                background-size: 100% 100%;
+            }
+
+            & .logo-txt:hover {
+                color: var(--nav-highlight);
+            }
+        }
+
+        @media screen and (min-width: 970px) {
+            & .nav-area {
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+
+                & .nav-item {
+                    display: inline-block;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 0 10px;
+
+                    & i {
+                        font-size: 23px !important;
+                    }
+
+                    & .nav-label {
+                        padding-left: 5px;
+                    }
+                }
+
+                & .nav-item:hover {
+                    color: var(--nav-highlight);
+
+                    & i {
+                        color: var(--nav-highlight) !important;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 970px) and (min-width: 720px) {
+            & .nav-area {
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+
+                & .nav-item {
+                    display: inline-block;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 0 10px;
+
+                    & i {
+                        font-size: 23px !important;
+                    }
+
+                    & .nav-label {
+                        display: none;
+                    }
+                }
+
+                & .nav-item:hover {
+                    color: var(--nav-highlight);
+
+                    & i {
+                        color: var(--nav-highlight) !important;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 720px) and (min-width: 600px) {
+            & .nav-area {
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+
+                & .nav-item {
+                    display: inline-block;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 0 10px;
+
+                    & i {
+                        font-size: 23px !important;
+                    }
+
+                    & .nav-label {
+                        display: none;
+                    }
+                }
+
+                & .nav-item:hover {
+                    color: var(--nav-highlight);
+
+                    & i {
+                        color: var(--nav-highlight) !important;
+                    }
+                }
+
+                & .filter-ipt {
+                    display: none;
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            & .nav-area {
+                display: none;
             }
         }
     }

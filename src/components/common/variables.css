@@ -1,4 +1,9 @@
 :root {
-    --mediaScreenMax: 900px;
-    --mediaScreenMin: 900px;
+    --bg-color: #fff;
+    --primary: #24292e;
+    --info: #b7b7b7;
+    --boder-color: #eee;
+    --highlight: #0366d6;
+    --nav-color: #fff;
+    --nav-highlight: #ffffffb3;
 }
