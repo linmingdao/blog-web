@@ -167,11 +167,11 @@
             margin-right: auto;
 
             @media screen and (min-width: 600px) {
-                max-width: 1200px;
+                max-width: 1000px;
             }
 
             @media screen and (max-width: 600px) {
-                max-width: 700px;
+                max-width: 600px;
             }
         }
     }
@@ -180,7 +180,7 @@
 .uniform-scroll::-webkit-scrollbar {
     width: var(--scrollWidth);
     height: var(--scrollWidth);
-    background-color: #282a36;
+    background-color: var(--scrollbarLightGray);
 }
 
 .uniform-scroll::-webkit-scrollbar-thumb {
