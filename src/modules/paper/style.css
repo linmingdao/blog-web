@@ -1,11 +1,14 @@
 .main-body {
-    & .content-box {
-        & .doc {
-            font-size: 15px;
-            & >>> img {
-                width: 100% !important;
-                height: auto !important;
-                border-radius: 10px;
+    & .content-wrapper {
+        height: 100%;
+
+        & .content-box {
+            & .doc {
+                font-size: 15px;
+                & >>> img {
+                    width: 100% !important;
+                    height: auto !important;
+                }
             }
         }
     }
