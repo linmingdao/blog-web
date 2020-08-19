@@ -160,11 +160,33 @@
         overflow: auto;
 
         & .content-box {
-            padding: 15px;
+            padding: 8px;
             max-width: 677px;
             box-sizing: border-box;
             margin-left: auto;
             margin-right: auto;
+
+            @media screen and (min-width: 600px) {
+                max-width: 1200px;
+            }
+
+            @media screen and (max-width: 600px) {
+                max-width: 700px;
+            }
         }
     }
+}
+
+.uniform-scroll::-webkit-scrollbar {
+    width: var(--scrollWidth);
+    height: var(--scrollWidth);
+    background-color: #282a36;
+}
+
+.uniform-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--thumbLightGray);
+}
+
+.uniform-scroll::-webkit-scrollbar-track {
+    background-color: var(--trackLightGray);
 }

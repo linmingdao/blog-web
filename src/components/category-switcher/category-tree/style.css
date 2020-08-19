@@ -29,6 +29,10 @@
                 background-color: var(--primary);
             }
         }
+
+        & .category-tree::-webkit-scrollbar-track {
+            background-color: var(--primary);
+        }
     }
 }
 

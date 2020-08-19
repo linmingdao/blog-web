@@ -6,4 +6,9 @@
     --highlight: #0366d6;
     --nav-color: #fff;
     --nav-highlight: #ffffffb3;
+    /* --------------------------- 滚动条色号 --------------------------- */
+    --scrollWidth: 10px;
+    --scrollbarLightGray: #f5f5f5;
+    --thumbLightGray: #999999;
+    --trackLightGray: #fff;
 }

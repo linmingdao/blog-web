@@ -2,7 +2,7 @@
     <div class="main-body">
         <category-switcher />
         <navigation-bar />
-        <div class="content-wrapper">
+        <div class="content-wrapper uniform-scroll">
             <div class="content-box">
                 <div class="article-list">
                     <div class="article-item" v-for="item in flatCategory" :key="item.id">

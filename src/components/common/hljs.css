@@ -1,3 +1,5 @@
+@import '@app/components/common/variables.css';
+
 /*
 
 Dracula Theme v1.2.0
@@ -14,11 +16,47 @@ http://zenorocha.mit-license.org
 
 */
 
+.markdown-root h1 {
+    color: #000;
+    margin: 25px 0;
+}
+
+.markdown-root h2 {
+    color: #000;
+    margin: 20px 0;
+}
+
+.markdown-root h3 {
+    color: #000;
+    margin: 15px 0;
+}
+
+.markdown-root h4,
+.markdown-root h5 {
+    color: #000;
+    margin: 10px 0;
+}
+
 .hljs {
     display: block;
     overflow-x: auto;
     padding: 0.5em;
     background: #282a36;
+    border-radius: 4px;
+}
+
+.hljs::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: var(--scrollbarLightGray);
+}
+
+.hljs::-webkit-scrollbar-thumb {
+    background-color: var(--thumbLightGray);
+}
+
+.hljs::-webkit-scrollbar-track {
+    background-color: #282a36;
 }
 
 .hljs-keyword,
