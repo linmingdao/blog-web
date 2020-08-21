@@ -1,0 +1,72 @@
+@import '@app/components/common/variables.css';
+
+.reward-bar {
+    margin-top: 30px;
+    color: var(--info);
+    font-size: 15px;
+
+    & .thanks {
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid var(--border-color);
+    }
+
+    & .channel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        & .item {
+            margin: 0 20px;
+
+            & .qr-code {
+                height: 200px;
+                width: 200px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+
+            & .qr-code.wx {
+                background-image: url('~@images/wx.jpg');
+            }
+
+            & .qr-code.zfb {
+                background-image: url('~@images/zfb.jpg');
+            }
+
+            & .name {
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+
+                & .logo {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        & .item.wx {
+            & .qr-code {
+                background-image: url('~@images/wx.jpg');
+            }
+            & .name {
+                & .logo {
+                    color: var(--wx-primary);
+                }
+            }
+        }
+
+        & .item.zfb {
+            & .qr-code {
+                background-image: url('~@images/zfb.jpg');
+            }
+
+            & .name {
+                & .logo {
+                    color: var(--zfb-primary);
+                }
+            }
+        }
+    }
+}

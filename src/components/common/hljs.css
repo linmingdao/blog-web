@@ -37,6 +37,12 @@ http://zenorocha.mit-license.org
     margin: 10px 0;
 }
 
+.markdown-root hr {
+    border: 0;
+    background-color: var(--border-color);
+    height: 1px;
+}
+
 .hljs {
     display: block;
     overflow-x: auto;

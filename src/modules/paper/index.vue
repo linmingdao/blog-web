@@ -1,10 +1,10 @@
 <template>
     <div class="main-body">
-        <!-- <category-switcher /> -->
-        <!-- <navigation-bar v-if="navBar" /> -->
         <div class="content-wrapper uniform-scroll">
             <div class="content-box">
+                <author-bar />
                 <div class="doc"><markdown-viewer :url="baseUrl + paperId + '.md'" /></div>
+                <reward-bar />
             </div>
         </div>
     </div>

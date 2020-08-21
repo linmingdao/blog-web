@@ -24,15 +24,7 @@ export default {
         };
     },
     async created() {
-        // 获取网站元数据信息
-        let metadata = sessionStorage.getItem('metadata');
-        if (!metadata) {
-            const { data = {} } = await axios.get('https://linmingdao.github.io/blog/metadata.json');
-            metadata = data;
-            sessionStorage.setItem('metadata', JSON.stringify(metadata));
-        } else {
-            metadata = JSON.parse(metadata);
-        }
+        const { data: metadata = {} } = await axios.get('https://linmingdao.github.io/blog/metadata.json');
 
         // 从元数据信息解析出文档大纲信息
         const { meta = {}, category = [], updates = [] } = metadata;
@@ -78,10 +70,6 @@ export default {
             this.$set(this, 'category', category);
             this.$set(this, 'flatCategory', flatCategory);
             this.$set(this, 'categoryTreeNode', categoryTreeNode);
-
-            // 用于搜索功能
-            sessionStorage.setItem('flatCategory', JSON.stringify(flatCategory));
-            sessionStorage.setItem('articleBaseUrl', articleBaseUrl);
         }
     }
 };
