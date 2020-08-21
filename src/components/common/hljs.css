@@ -17,13 +17,14 @@ http://zenorocha.mit-license.org
 */
 
 .markdown-root h1 {
-    color: #000;
+    color: #2196f3;
     margin: 25px 0;
 }
 
 .markdown-root h2 {
-    color: #000;
+    color: #ff5722;
     margin: 20px 0;
+    border-bottom: 1px solid #ff572280;
 }
 
 .markdown-root h3 {
@@ -41,6 +42,26 @@ http://zenorocha.mit-license.org
     border: 0;
     background-color: var(--border-color);
     height: 1px;
+}
+
+.markdown-root a {
+    color: #2196f3;
+}
+
+.markdown-root a:link {
+    text-decoration: none;
+}
+
+.markdown-root a:visited {
+    text-decoration: none;
+}
+
+.markdown-root a:hover {
+    text-decoration: none;
+}
+
+.markdown-root a:active {
+    text-decoration: none;
 }
 
 .hljs {
