@@ -3,7 +3,7 @@ export default {
     props: {
         thanks: {
             type: String,
-            default: '如果你觉得这篇文章对你有帮助, 那么就请作者喝杯咖啡吧 ^_^'
+            default: '如果这篇文章对你有帮助, 请作者喝杯咖啡吧 ^_^'
         }
     }
 };
