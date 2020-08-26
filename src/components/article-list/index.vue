@@ -1,6 +1,6 @@
 <template>
     <div class="main-body">
-        <category-switcher :category="category" :article-base-url="articleBaseUrl" />
+        <category-switcher ref="switcher" :category="category" :article-base-url="articleBaseUrl" />
         <navigation-bar :current-model="currentModel" />
         <div class="content-wrapper uniform-scroll">
             <div class="content-box">
