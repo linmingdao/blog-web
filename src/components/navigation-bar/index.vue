@@ -5,7 +5,14 @@
             <a class="logo-txt" :href="href" target="_self">{{ slogan }} </a>
         </div>
         <div class="nav-area">
-            <a class="nav-item" v-for="nav in items" :key="nav.label" :href="nav.href" target="_blank">
+            <a
+                class="nav-item"
+                :class="{ active: nav.model === currentModel }"
+                v-for="nav in items"
+                :key="nav.label"
+                :href="nav.href"
+                target="_blank"
+            >
                 <i class="iconfont" :class="[nav.icon]"></i><span class="nav-label">{{ nav.label }}</span>
             </a>
         </div>

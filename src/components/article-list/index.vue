@@ -1,7 +1,7 @@
 <template>
     <div class="main-body">
-        <category-switcher />
-        <navigation-bar />
+        <category-switcher :category="category" :article-base-url="articleBaseUrl" />
+        <navigation-bar :current-model="currentModel" />
         <div class="content-wrapper uniform-scroll">
             <div class="content-box">
                 <div class="article-list">

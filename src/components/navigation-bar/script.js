@@ -1,6 +1,10 @@
 export default {
     name: 'navigation-bar',
     props: {
+        currentModel: {
+            type: String,
+            default: ''
+        },
         href: {
             type: String,
             default: 'https://linmingdao.github.io/'
@@ -14,10 +18,31 @@ export default {
             default: function() {
                 return [
                     {
-                        label: '博客',
+                        label: '技术',
+                        model: 'tech',
                         target: '_self',
-                        icon: 'iconblog',
-                        href: 'https://linmingdao.github.io/'
+                        icon: 'iconyuanzi',
+                        href: 'https://linmingdao.github.io/#/tech'
+                    },
+                    {
+                        label: '个人',
+                        model: 'privacy',
+                        target: '_self',
+                        icon: 'iconkongjian',
+                        href: 'https://linmingdao.github.io/#/privacy'
+                    },
+                    {
+                        label: '全部博文',
+                        model: 'all',
+                        target: '_self',
+                        icon: 'iconall',
+                        href: 'https://linmingdao.github.io/#/all'
+                    },
+                    {
+                        label: 'GitHub',
+                        target: '_blank',
+                        icon: 'icongithub',
+                        href: 'https://github.com/linmingdao'
                     },
                     {
                         label: '微博',
@@ -32,13 +57,7 @@ export default {
                         href: 'https://space.bilibili.com/325195'
                     },
                     {
-                        label: 'GitHub',
-                        target: '_blank',
-                        icon: 'icongithub',
-                        href: 'https://github.com/linmingdao'
-                    },
-                    {
-                        label: '关于作者',
+                        label: '作者',
                         target: '_blank',
                         icon: 'iconzuozhe',
                         href: 'https://github.com/linmingdao'

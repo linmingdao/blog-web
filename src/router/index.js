@@ -9,11 +9,21 @@ export default new VueRouter({
     routes: [
         {
             path: '/',
-            redirect: '/home'
+            redirect: '/tech'
         },
         {
-            path: '/home',
-            component: () => import('@app/modules/home/index.vue'),
+            path: '/tech',
+            component: () => import('@app/modules/tech/index.vue'),
+            beforeEnter: (to, from, next) => authorize(to, from, next)
+        },
+        {
+            path: '/privacy',
+            component: () => import('@app/modules/privacy/index.vue'),
+            beforeEnter: (to, from, next) => authorize(to, from, next)
+        },
+        {
+            path: '/all',
+            component: () => import('@app/modules/all/index.vue'),
             beforeEnter: (to, from, next) => authorize(to, from, next)
         },
         {
