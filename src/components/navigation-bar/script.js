@@ -19,21 +19,21 @@ export default {
                     {
                         label: '技术',
                         model: 'tech',
-                        target: '_self',
+                        target: '_blank',
                         icon: 'iconyuanzi',
                         href: 'https://linmingdao.github.io/#/tech'
                     },
                     {
                         label: '个人',
                         model: 'privacy',
-                        target: '_self',
+                        target: '_blank',
                         icon: 'iconkongjian',
                         href: 'https://linmingdao.github.io/#/privacy'
                     },
                     {
                         label: '全部博文',
                         model: 'all',
-                        target: '_self',
+                        target: '_blank',
                         icon: 'iconall',
                         href: 'https://linmingdao.github.io/#/all'
                     },
