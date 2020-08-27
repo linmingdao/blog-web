@@ -1,0 +1,57 @@
+@import '@app/components/common/variables.css';
+
+.suspend-nav-mask {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--mask-bg);
+    z-index: 1000;
+    transition: display 5s ease-out;
+
+    & .suspend-nav-box {
+        position: absolute;
+        right: 0;
+        width: 70px;
+        height: 100%;
+        overflow: auto;
+        box-sizing: border-box;
+        background-color: var(--primary);
+
+        & .suspend-nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+
+            & a {
+                color: var(--nav-color);
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 25px;
+
+                & .iconfont {
+                    font-size: 25px !important;
+                }
+            }
+        }
+
+        & .suspend-nav-item.active {
+            & a {
+                color: var(--active-nav);
+            }
+        }
+
+        & .suspend-nav-item:hover {
+            color: var(--nav-highlight);
+
+            & i {
+                color: var(--nav-highlight) !important;
+            }
+        }
+    }
+
+    & .suspend-nav-box::-webkit-scrollbar-track {
+        background-color: var(--primary);
+    }
+}

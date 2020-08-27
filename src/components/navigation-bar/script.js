@@ -1,4 +1,5 @@
 import categorySwitcher from '@app/components/category-switcher/index.vue';
+import suspendNavSwitcher from '@app/components/suspend-nav-switcher/index.vue';
 
 export default {
     name: 'navigation-bar',
@@ -6,10 +7,6 @@ export default {
         currentModel: {
             type: String,
             default: ''
-        },
-        href: {
-            type: String,
-            default: 'https://linmingdao.github.io/'
         },
         slogan: {
             type: String,
@@ -73,5 +70,5 @@ export default {
             this.$refs['switcher'].init({ category, articleBaseUrl });
         }
     },
-    components: { categorySwitcher }
+    components: { categorySwitcher, suspendNavSwitcher }
 };

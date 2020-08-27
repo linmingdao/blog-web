@@ -1,0 +1,14 @@
+@import '@app/components/common/variables.css';
+
+.suspend-nav-switcher {
+    padding: 0 4px;
+    font-size: 20px;
+
+    & .iconfont {
+        font-size: 20px !important;
+    }
+}
+
+.suspend-nav-switcher:hover {
+    color: var(--nav-highlight);
+}

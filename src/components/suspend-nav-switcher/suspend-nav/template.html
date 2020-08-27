@@ -1,0 +1,14 @@
+<div class="suspend-nav-mask" @mousedown.prevent="hideSelf">
+    <div class="suspend-nav-box uniform-scroll" @mousedown.stop="">
+        <div
+            class="suspend-nav-item"
+            :class="{ active: nav.model === currentModel }"
+            v-for="nav in navItems"
+            :key="nav.label"
+        >
+            <a :href="nav.href" :target="nav.target" :title="nav.label">
+                <i class="iconfont" :class="[nav.icon]"></i>
+            </a>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,7 @@
     --wx-primary: #22ab39;
     --zfb-primary: #1777ff;
     --active-nav: #73b5ff;
+    --mask-bg: rgba(0, 0, 0, 0.3);
     /* --------------------------- 滚动条色号 --------------------------- */
     --scrollWidth: 10px;
     --scrollbarLightGray: #f5f5f5;

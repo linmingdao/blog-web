@@ -1,15 +1,11 @@
 @import '@app/components/common/variables.css';
 
 .category-switcher {
-    padding: 0 4px;
-    font-size: 20px;
+    font-size: 16px;
     margin-right: 5px;
-
-    & .iconfont {
-        font-size: 20px !important;
-    }
-}
-
-.category-switcher:hover {
-    color: var(--nav-highlight);
+    background: linear-gradient(90deg, #f29914 15%, #0bbbe3 76%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor: pointer;
 }

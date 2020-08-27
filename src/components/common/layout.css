@@ -14,12 +14,6 @@
         display: flex;
         justify-content: space-between;
 
-        & a {
-            color: var(--nav-color);
-            text-decoration: none;
-            cursor: pointer;
-        }
-
         & .banner-area {
             height: 100%;
             display: flex;
@@ -51,6 +45,12 @@
             display: flex;
             align-items: center;
 
+            & a {
+                color: var(--nav-color);
+                text-decoration: none;
+                cursor: pointer;
+            }
+
             & .nav-item {
                 display: inline-block;
                 height: 50px;
@@ -79,9 +79,13 @@
                     color: var(--nav-highlight) !important;
                 }
             }
+
+            & .nav-switcher {
+                display: none;
+            }
         }
 
-        @media screen and (max-width: 980px) and (min-width: 600px) {
+        @media screen and (max-width: 980px) and (min-width: 630px) {
             & .nav-area {
                 & .nav-item {
                     & i {
@@ -95,9 +99,15 @@
             }
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 630px) {
             & .nav-area {
-                display: none;
+                & .nav-item {
+                    display: none;
+                }
+
+                & .nav-switcher {
+                    display: block;
+                }
             }
         }
     }

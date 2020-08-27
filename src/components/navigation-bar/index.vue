@@ -15,6 +15,7 @@
             >
                 <i class="iconfont" :class="[nav.icon]"></i><span class="nav-label">{{ nav.label }}</span>
             </a>
+            <suspend-nav-switcher class="nav-switcher" :nav-items="items" :current-model="currentModel" />
         </div>
     </div>
 </template>
