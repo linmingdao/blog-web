@@ -1,3 +1,5 @@
+import categorySwitcher from '@app/components/category-switcher/index.vue';
+
 export default {
     name: 'navigation-bar',
     props: {
@@ -11,7 +13,7 @@ export default {
         },
         slogan: {
             type: String,
-            default: '叕要开始扯蛋了'
+            default: '又要开始扯<a class="logo"></a>了'
         },
         items: {
             type: Array,
@@ -65,5 +67,11 @@ export default {
                 ];
             }
         }
-    }
+    },
+    methods: {
+        initCategorySwitcher({ category, articleBaseUrl }) {
+            this.$refs['switcher'].init({ category, articleBaseUrl });
+        }
+    },
+    components: { categorySwitcher }
 };

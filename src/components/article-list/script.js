@@ -1,5 +1,4 @@
 import { getCategoryData } from '@app/utils';
-import categorySwitcher from '@app/components/category-switcher/index.vue';
 import navigationBar from '@app/components/navigation-bar/index.vue';
 import markdownViewer from '@app/components/markdown-viewer/index.vue';
 
@@ -29,8 +28,8 @@ export default {
         this.$set(this, 'articleBaseUrl', articleBaseUrl);
 
         // 初始化菜单控件
-        const $switcher = this.$refs['switcher'];
-        $switcher && $switcher.init({ category, articleBaseUrl });
+        const $navBar = this.$refs['navBar'];
+        $navBar && $navBar.initCategorySwitcher({ category, articleBaseUrl });
     },
-    components: { categorySwitcher, navigationBar, markdownViewer }
+    components: { navigationBar, markdownViewer }
 };

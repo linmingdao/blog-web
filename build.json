@@ -1,7 +1,7 @@
 {
     "name": "blog-web",
     "entry": "index.js",
-    "title": "叕要开始扯蛋了",
+    "title": "又要开始扯蛋了",
     "logo": "logo.png",
     "static": {
         "replace": true,

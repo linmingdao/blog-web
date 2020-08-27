@@ -1,8 +1,8 @@
 <template>
     <div class="navigation-box">
-        <div class="blog-logo">
-            <a class="logo"></a>
-            <a class="logo-txt" target="_self">{{ slogan }} </a>
+        <div class="banner-area">
+            <category-switcher ref="switcher" :category="category" :article-base-url="articleBaseUrl" />
+            <a class="slogan" v-html="slogan"></a>
         </div>
         <div class="nav-area">
             <a
