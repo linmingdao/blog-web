@@ -5,6 +5,14 @@ import markdownViewer from '@app/components/markdown-viewer/index.vue';
 export default {
     name: 'paper',
     props: {
+        showAuthorBar: {
+            type: Boolean,
+            default: true
+        },
+        showRewardBar: {
+            type: Boolean,
+            default: true
+        },
         paperId: {
             type: String,
             default: ''

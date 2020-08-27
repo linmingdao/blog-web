@@ -2,7 +2,7 @@
     <div class="navigation-box">
         <div class="blog-logo">
             <a class="logo"></a>
-            <a class="logo-txt" :href="href" target="_self">{{ slogan }} </a>
+            <a class="logo-txt" target="_self">{{ slogan }} </a>
         </div>
         <div class="nav-area">
             <a
@@ -11,7 +11,7 @@
                 v-for="nav in items"
                 :key="nav.label"
                 :href="nav.href"
-                target="_blank"
+                :target="nav.target"
             >
                 <i class="iconfont" :class="[nav.icon]"></i><span class="nav-label">{{ nav.label }}</span>
             </a>

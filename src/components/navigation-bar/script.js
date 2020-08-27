@@ -60,7 +60,7 @@ export default {
                         label: '作者',
                         target: '_blank',
                         icon: 'iconzuozhe',
-                        href: 'https://github.com/linmingdao'
+                        href: 'https://linmingdao.github.io/#/about'
                     }
                 ];
             }

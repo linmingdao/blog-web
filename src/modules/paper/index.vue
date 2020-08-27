@@ -2,9 +2,9 @@
     <div class="main-body">
         <div class="content-wrapper uniform-scroll">
             <div class="content-box">
-                <author-bar />
+                <author-bar v-if="showAuthorBar" />
                 <div class="doc"><markdown-viewer :url="baseUrl + paperId + '.md'" /></div>
-                <reward-bar />
+                <reward-bar v-if="showRewardBar" />
             </div>
         </div>
     </div>

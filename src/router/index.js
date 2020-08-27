@@ -13,16 +13,19 @@ export default new VueRouter({
         },
         {
             path: '/tech',
+            name: 'tech',
             component: () => import('@app/modules/tech/index.vue'),
             beforeEnter: (to, from, next) => authorize(to, from, next)
         },
         {
             path: '/privacy',
+            name: 'privacy',
             component: () => import('@app/modules/privacy/index.vue'),
             beforeEnter: (to, from, next) => authorize(to, from, next)
         },
         {
             path: '/all',
+            name: 'all',
             component: () => import('@app/modules/all/index.vue'),
             beforeEnter: (to, from, next) => authorize(to, from, next)
         },
@@ -31,6 +34,12 @@ export default new VueRouter({
             name: 'paper',
             props: true,
             component: () => import('@app/modules/paper/index.vue'),
+            beforeEnter: (to, from, next) => authorize(to, from, next)
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: () => import('@app/modules/about/index.vue'),
             beforeEnter: (to, from, next) => authorize(to, from, next)
         }
     ]
