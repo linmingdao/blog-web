@@ -14,7 +14,7 @@ export default {
             type: String,
             default: function() {
                 return {
-                    name: '叕要开始扯蛋了',
+                    name: '又要开始扯蛋了',
                     link: 'https://linmingdao.github.io/'
                 };
             }
